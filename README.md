@@ -1,5 +1,26 @@
-# laptimer
-Arduino laptimer for go kart
+# laptimer:  Arduino magnetic laptimer for karting
+
+## Purpose
+From time to time I like to race my friends in hired gokarts. After the race we usually get a transscript of the individual laptimes achived. I just really can not remember if it was due to traffic or early breaking that lap 6 was slow, thus I have a hard time improving my racing skils. In my mind the cure is to have the laptimes instantly.
+
+After some research I found out that most gokart tacks in Europe have 1 to 3 magnetic strips placed in the track. I figured that an Arduino with a readswitch and a display should be able to register eash passage over a magnetic strip and display the time between each passage.
+
+This build is made for the purpose to mount in a hired gokart, but it could be used as a permanent installation if you own your own kart, and possible also for motorcycles even this is not the main focus.
+
+## Features
+* Configurable number of sectors between 1 and 3
+* Interrupt driven
+* Multiple display options
+
+## Materials and Wireing
+* Arduino Uno
+* [Arduino LCD Keypad Shield](https://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009))
+* Reed switch
+* 2 magnets and glue
+
+The keys are attached to `A0` and the display uses `D4` to `D10` when attached to the arduino.
+
+The reed switch has ground to `GND` an vin to `3V3` and digital out to `D2` - the last part is important as this is the first of the two only pins which can be used to attach an interrupt on an Arduino uno. 
 
 ## Operation
 
@@ -11,8 +32,7 @@ After boot or confinguration changes the data is wiped and the laptimer goes int
 
 The display will differ dependent on wheter the tack only has one magnet strip and each passage corresponds to a lap or it has serveral (up to 3) where split times wil be shown.
 
-## Single sector mode
-
+### Single sector mode
 ![single sector](https://raw.githubusercontent.com/SeniorWizard/laptimer/master/laptimer_single_sector.jpg)
 
 First line of the display shows:
@@ -32,8 +52,7 @@ On the image is shown the first 3 laps.
 * Next passage is done after `12.91` a slower time indcated by the difference of `+1.96`
 * Next passage is done after `10.73` a new best by `-0.22` also indicated by the status as well as the display blinking
 
-## Multi sector mode
-
+### Multi sector mode
 ![multi sector](https://raw.githubusercontent.com/SeniorWizard/laptimer/master/laptimer_multi_sector.jpg)
 
 First line of the display shows:
