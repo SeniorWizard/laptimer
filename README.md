@@ -1,5 +1,15 @@
 # laptimer:  Arduino magnetic laptimer for karting
 
+**Table of Contents** 
+
+- [Purpose](#purpose)
+- [Features](#features)
+- [Materials and Wireing](#materials-and-wireing)
+- [Operation](#operation)
+  - [Single sector mode](#single-sector-mode)
+  - [Multi sector mode](#multi-sector-mode)
+ - [Future improvements and notes](#future-improvements-and-notes)
+
 ## Purpose
 From time to time I like to race my friends in hired gokarts. After the race we usually get a transscript of the individual laptimes achived. I just really can not remember if it was due to traffic or early breaking that lap 6 was slow, thus I have a hard time improving my racing skils. In my mind the cure is to have the laptimes instantly.
 
@@ -17,12 +27,20 @@ This build is made for the purpose to mount in a hired gokart, but it could be u
 * [Arduino LCD Keypad Shield](https://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009))
 * Reed switch
 * 2 magnets and glue
+* Old 3 wire powercord
+* Plastic labtube or similar
+* 9V Battery and Adapter
+
+![Overview](https://raw.githubusercontent.com/SeniorWizard/laptimer/master/laptimer_overview.jpg)
+
 
 The keys are attached to `A0` and the display uses `D4` to `D10` when attached to the arduino.
 
 The reed switch has ground to `GND` an vin to `3V3` and digital out to `D2` - the last part is important as this is the first of the two only pins which can be used to attach an interrupt on an Arduino uno. 
 
 ## Operation
+
+Mount the laptimer by attaching the display to the steeringwheel using the magnets, place the reed-switch in the buttom of the kart as near the ground as possible.
 
 Holding down `select` for two seconds open configuration mode where `up` or `right` increases the number of sectors by one and `down`or `left` decreses the number by one. Pressing `select` again stores the chosen value in flash and will be read and used as default after boot.
 
@@ -71,4 +89,7 @@ On the image is shown 4 passages completing the second lap to illustrate the ide
 * third sector also slower, note that we are now more than 10 seconds slower indicated by `+9.99` as we pass the start-finish line to lap 3
 * first sector is then completed in `14.40`, a new best for this sector by `-1.94`, while our previous slow sector 2 and 3 still makes our pseudo laptime slower by almos 10 seconds.
 
+## Future improvements and notes
+
+It is a bit clumsey and heavy, and there are a lot of vibrations in a gokart. Make use of a smaller and lighter display and a arduino nano would help a lot. Alternative just using a buzzer and some kind of beep/knock system could be almost as effetive and remove the needs for both wire and display (eg one short beep for each tenth faster, and long beep for slower).
 
