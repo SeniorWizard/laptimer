@@ -58,7 +58,7 @@ After boot or confinguration changes the data is wiped and the laptimer goes int
 The display will differ dependent on wheter the tack only has one magnet strip and each passage corresponds to a lap or it has serveral (up to 3) where split times wil be shown.
 
 ### Single sector mode
-![single sector](/laptimer_single_sector.jpg&raw=true)
+![single sector](/laptimer_single_sector.jpg?raw=true)
 
 First line of the display shows:
 * Last laptime
@@ -78,7 +78,7 @@ On the image is shown the first 3 laps.
 * Next passage is done after `10.73` a new best by `-0.22` also indicated by the status as well as the display blinking
 
 ### Multi sector mode
-![multi sector](/laptimer_multi_sector.jpg&raw=true)
+![multi sector](/laptimer_multi_sector.jpg?raw=true)
 
 First line of the display shows:
 * Last sector time
