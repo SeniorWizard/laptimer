@@ -51,14 +51,14 @@ Mount the laptimer by attaching the display to the steeringwheel using the magne
 
 Holding down `select` for two seconds open configuration mode where `up` or `right` increases the number of sectors by one and `down`or `left` decreses the number by one. Pressing `select` again stores the chosen value in flash and will be read and used as default after boot.
 
-![Configuration](/laptimer/laptimer_config.jpg?raw=true)
+![Configuration](/laptimer_config.jpg?raw=true)
 
 After boot or confinguration changes the data is wiped and the laptimer goes into `WAIT` mode that is waiting for first passage of a magnet strip which indicates we are starting the first lap.
 
 The display will differ dependent on wheter the tack only has one magnet strip and each passage corresponds to a lap or it has serveral (up to 3) where split times wil be shown.
 
 ### Single sector mode
-![single sector](https://github.com/SeniorWizard/laptimer/blob/master/laptimer_single_sector.jpg&raw=true)
+![single sector](/laptimer_single_sector.jpg&raw=true)
 
 First line of the display shows:
 * Last laptime
@@ -78,7 +78,7 @@ On the image is shown the first 3 laps.
 * Next passage is done after `10.73` a new best by `-0.22` also indicated by the status as well as the display blinking
 
 ### Multi sector mode
-![multi sector](/laptimer_multi_sector.jpg)
+![multi sector](/laptimer_multi_sector.jpg&raw=true)
 
 First line of the display shows:
 * Last sector time
